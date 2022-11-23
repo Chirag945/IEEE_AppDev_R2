@@ -1,121 +1,121 @@
 import 'package:flutter/material.dart';
 
-class edit extends StatelessWidget {
-  const edit({Key? key}) : super(key: key);
+
+
+class HOME extends StatefulWidget {
+  @override
+  State<HOME> createState() => _HOMEState();
+}
+
+class _HOMEState extends State<HOME> {
+  String name = "YOUR NAME";
+  String Hobby_1 = "Gaming";
+  String Hobby_2 = "Sports";
+  String Hobby_3 = "Dance";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.black,
+          backgroundColor: Colors.grey,
+          title: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: <Widget>[
+                IconButton(
+                  onPressed: () {
+                    print('Sorry was"nt able to do the pic');
+                   Navigator.pushNamed(context,'/edit');
+                  },
+                  icon: Icon(Icons.edit_note),
+                  color: Colors.white,
+                ),
+              ]
+          )
       ),
-      body:Center(
-        child:Column(
-          children: <Widget> [
-            SizedBox(height: 20,),
+      body: Center(
+        child: Column(
+          children: <Widget>[
+            Image(
+              image: AssetImage('assets/load.jpg'),
+            ),
             Text(
-              "EDIT DETAILS",
+              "$name",
+              style: TextStyle(
+                color: Colors.blue,
+                fontSize: 20.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            
+              ),
+            ),
+            Text(
+              'Creativity never goes wrong all you 
+              need is the right direcrtion',
               style: TextStyle(
                 color: Colors.white,
-                fontSize: 40,
+                fontSize: 20,
               ),
             ),
-            SizedBox(height: 20,),
-
-            ElevatedButton(
-              child: Text('Select Profile \nPhoto'),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                primary: Colors.grey,
-                padding: EdgeInsets.symmetric(horizontal: 5, vertical: 20),
-                textStyle: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-
-            ),
-            SizedBox(height: 20,),
-            ElevatedButton(
-              child: Text('Name'),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                primary: Colors.grey,
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-                textStyle: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-
-            ),
-            SizedBox(height: 20,),
-            ElevatedButton(
-              child: Text('Bio'),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                primary: Colors.grey,
-                padding: EdgeInsets.symmetric(horizontal: 50, vertical: 20),
-                textStyle: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-
-            ),
-            SizedBox(height: 20,),
-            ElevatedButton(
-              child: Text('hobby 1'),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                primary: Colors.grey,
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-                textStyle: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
-
-            ),
-            SizedBox(height: 10,),
-            ElevatedButton(
-              child: Text('hobby 2'),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                primary: Colors.grey,
-                padding: EdgeInsets.symmetric(horizontal:40, vertical: 10),
-                textStyle: TextStyle(
-                  fontSize: 20,
-                ),
-
+            Text(
+              'Interests / Hobbies',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(height: 10,),
-            ElevatedButton(
-              child: Text('Hobby 3'),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                primary: Colors.grey,
-                padding: EdgeInsets.symmetric(horizontal: 40, vertical: 10),
-                textStyle: TextStyle(
-                  fontSize: 20,
-                ),
-              ),
 
-            ),
-            SizedBox(height: 20,),
-            ElevatedButton(
-              child: Text('SAVE'),
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(
-                primary: Colors.blueAccent,
-                padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
-                textStyle: TextStyle(
-                  fontSize: 20,
+           
+                child:Containe(
+                    backgroundColor: Colors.grey[800],
+                    child: Text(
+                        'Hobby-1',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                            fontWeight: FontWeight.bold
+                        )
+                    ),
+                  ),
                 ),
-              ),
+
+                Container(
+                    
+                    
+                        backgroundColor: Colors.grey[800]
+                        child: Text(
+                            'Hobby_2',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                                fontWeight: FontWeight.bold
+
+                            )
+                        )
+                    )
+                ),
+                Container(
+                    backgroundColor: Colors.grey[800],
+                    
+                    child: Text(
+                      'Hobby_3',
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 12,
+                          fontWeight: FontWeight.bold
+                      ),
+                    ),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
       ),
       backgroundColor: Colors.black,
-    );
 
+
+    );
   }
 }
